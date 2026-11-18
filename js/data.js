@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "9";
+window.SITE_VERSION = "11";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -41,9 +41,9 @@ window.PROJECTS = [
     ar: {1: 1.558, 2: 1.762, 3: 1.791, 4: 1.549, 5: 0.939, 6: 0.946, 7: 1.46, 8: 0.743},
     text: ["Vivienda de dos niveles en Loanco, formada por volúmenes de madera y paños oscuros que se desplazan entre sí. Hacia el acceso, una galería con pérgola y vegetación suaviza el encuentro con el jardín.", "Se presentan plantas de ambos niveles, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Estructura de acero y metalcón.", "Proyecto realizado en conjunto con Victor Luarte. Obra construida."]
   },
-  { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 5,
-    rows: [[1, 2], [3], [4, 5]],
-    ar: {1: 1.182, 2: 0.932, 3: 1.576, 4: 1.168, 5: 1.083},
+  { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 7,
+    rows: [[1], [2], [3, 4], [5], [6, 7]],
+    ar: {1: 3.025, 2: 4.495, 3: 1.182, 4: 0.932, 5: 1.576, 6: 1.168, 7: 1.083},
     text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
   },
   {
