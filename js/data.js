@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "3";
+window.SITE_VERSION = "4";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -8,31 +8,42 @@ window.PROJECTS = [
     // rows: filas de la galería (números de imagen). ar: proporción ancho/alto de cada imagen, para alinear las alturas de cada fila.
     rows: [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10], [11], [12], [13]],
     ar: { 1: 1.339, 2: 1.339, 3: 1.25, 4: 1.25, 5: 1.25, 6: 1.339, 7: 1.25, 8: 1.339, 9: 0.8, 10: 1.41, 11: 1.41, 12: 1.41, 13: 1.41 },
-    text: ["Vivienda de un nivel en el Haras de Huilquilemu, organizada en tres cuerpos de cubierta inclinada que se articulan en torno a terrazas y una piscina. Un volumen reúne el estacionamiento cubierto y los recintos de servicio; otro, la cocina, el comedor, el living y el dormitorio principal; y un tercero, girado en diagonal hacia el terreno, los dormitorios y un estar.", "Estructura de pino radiado con revestimiento vertical de WPC color negro, amplios paños vidriados hacia el jardín y la terraza, y el piso elevado sobre el terreno natural. Suma 173 m² útiles. Se presentan renders exteriores e interiores, axonométrica, planta, elevaciones, cortes, escantillón y cuadros de superficies.", "Proyecto realizado en conjunto con Natalia Herrera."]
+    text: ["Vivienda de un nivel en el Haras de Huilquilemu, organizada en tres cuerpos de cubierta inclinada que se articulan en torno a terrazas y una piscina. Un volumen reúne el estacionamiento cubierto y los recintos de servicio; otro, la cocina, el comedor, el living y el dormitorio principal; y un tercero, girado en diagonal hacia el terreno, los dormitorios y un estar.", "Estructura de acero y panel SIP, con revestimiento vertical de WPC color negro, amplios paños vidriados hacia el jardín y la terraza, y el piso elevado sobre el terreno natural. Suma 173 m² útiles. Se presentan renders exteriores e interiores, axonométrica, planta, elevaciones, cortes, escantillón y cuadros de superficies.", "Proyecto realizado en conjunto con Natalia Herrera."]
   },
   { slug: "vivienda-ac", title: "Vivienda AC", type: "Habitacional · Vivienda", n: 21,
     rows: [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11], [12, 13], [14, 15], [16, 17], [18], [19], [20], [21]],
     ar: { 1: 1.778, 2: 1.778, 3: 1.778, 4: 1.778, 5: 1.778, 6: 1.778, 7: 1.778, 8: 1.778, 9: 1.778, 10: 1.778, 11: 1.778, 12: 1.778, 13: 1.778, 14: 1.778, 15: 1.778, 16: 1.778, 17: 1.778 },
-    text: ["Vivienda de un nivel revestida en tablas verticales oscuras y organizada en torno a un patio central con lucarna, que lleva luz natural y vegetación al interior. Un volumen superior de iluminación cenital corona la cubierta.", "Incluye planta, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Obra construida."]
+    text: ["Vivienda de un nivel revestida en tablas verticales oscuras y organizada en torno a un patio central con lucarna, que lleva luz natural y vegetación al interior. Un volumen superior de iluminación cenital corona la cubierta.", "Incluye planta, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Estructura de acero y panel SIP.", "Obra construida."]
   },
   { slug: "vivienda-nw", title: "Vivienda NW", type: "Habitacional · Vivienda", n: 11,
-    text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Obra construida."]
+    rows: [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11]],
+    ar: {1: 1.777, 2: 1.789, 3: 1.772, 4: 1.789, 5: 1.415, 6: 1.388, 7: 1.569, 8: 1.038, 9: 1.358, 10: 1.282, 11: 1.291},
+    text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Estructura de albañilería.", "Obra construida."]
   },
   {
     slug: "tiny-house", title: "Tiny House", type: "Habitacional · Tiny house", place: "Vilches, San Clemente", year: "2025", n: 9,
-    wide: [1, 4, 5, 6, 7, 8, 9],
-    text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de madera sobre entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera. Obra construida."]
+    rows: [[1], [2, 3], [4], [5], [6], [7], [8], [9]],
+    ar: {1: 1.5, 2: 1.5, 3: 0.667, 4: 1.674, 5: 1.674, 6: 1.674, 7: 1.674, 8: 1.674, 9: 1.674},
+    text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de tabiquería de madera sobre pilares de madera, con entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera. Obra construida."]
   },
   { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
-    text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Proyecto realizado en conjunto con Victor Luarte."]
+    rows: [[1], [2, 3], [4, 5], [6], [7, 8], [9]],
+    ar: {1: 1.812, 2: 1.814, 3: 0.997, 4: 1.549, 5: 1.383, 6: 1.449, 7: 1.578, 8: 0.914, 9: 1.639},
+    text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Estructura de acero y metalcón.", "Proyecto realizado en conjunto con Victor Luarte."]
   },
   { slug: "melipeuco", title: "Cabaña en Melipeuco", type: "Habitacional · Cabaña", place: "Melipeuco", n: 11,
-    text: ["Cabaña de planta alargada en Melipeuco, emplazada entre árboles. Su cubierta de una sola agua, el revestimiento de madera y los ventanales corridos la abren al bosque, con una terraza cubierta a lo largo de la fachada.", "El proyecto incluye emplazamiento, planta, elevaciones, cortes, axonométrica estructural y renders exteriores e interiores.", "Proyecto realizado en conjunto con Ma. de la Luz Figueroa."]
+    rows: [[1], [2, 3], [4, 5], [6, 7], [8], [9, 10], [11]],
+    ar: {1: 1.78, 2: 1.809, 3: 1.781, 4: 1.804, 5: 1.338, 6: 0.65, 7: 2.197, 8: 1.519, 9: 1.085, 10: 1.009, 11: 2.066},
+    text: ["Cabaña de planta alargada en Melipeuco, emplazada entre árboles. Su cubierta de una sola agua, el revestimiento de madera y los ventanales corridos la abren al bosque, con una terraza cubierta a lo largo de la fachada.", "El proyecto incluye emplazamiento, planta, elevaciones, cortes, axonométrica estructural y renders exteriores e interiores.", "Estructura de tabiquería de madera.", "Proyecto realizado en conjunto con Ma. de la Luz Figueroa."]
   },
   { slug: "loanco", title: "Vivienda en Loanco", type: "Habitacional · Vivienda", place: "Loanco", n: 8,
-    text: ["Vivienda de dos niveles en Loanco, formada por volúmenes de madera y paños oscuros que se desplazan entre sí. Hacia el acceso, una galería con pérgola y vegetación suaviza el encuentro con el jardín.", "Se presentan plantas de ambos niveles, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Proyecto realizado en conjunto con Victor Luarte. Obra construida."]
+    rows: [[1], [2, 3], [4], [5, 6], [7, 8]],
+    ar: {1: 1.558, 2: 1.762, 3: 1.791, 4: 1.549, 5: 0.939, 6: 0.946, 7: 1.46, 8: 0.743},
+    text: ["Vivienda de dos niveles en Loanco, formada por volúmenes de madera y paños oscuros que se desplazan entre sí. Hacia el acceso, una galería con pérgola y vegetación suaviza el encuentro con el jardín.", "Se presentan plantas de ambos niveles, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Estructura de acero y metalcón.", "Proyecto realizado en conjunto con Victor Luarte. Obra construida."]
   },
   { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 5,
+    rows: [[1, 2], [3], [4, 5]],
+    ar: {1: 1.182, 2: 0.932, 3: 1.576, 4: 1.168, 5: 1.083},
     text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
   },
   {

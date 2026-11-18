@@ -1,7 +1,7 @@
 :root {
   --bg: #fff;
   --fg: #151515;
-  --muted: #7a7a7a;
+  --muted: #555;
   --line: #e4e4e4;
   --pad: clamp(20px, 4vw, 56px);
   --track: .18em;
