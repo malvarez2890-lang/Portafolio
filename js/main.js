@@ -1,5 +1,5 @@
 (function () {
-  var P = window.PROJECTS, PR = window.PROFILE, C = window.CONTACT;
+  var P = window.PROJECTS, PR = window.PROFILE, C = window.CONTACT, B = window.BIM;
   var app = document.getElementById("app");
   var pad = function (n) { return String(n).padStart(2, "0"); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
@@ -15,7 +15,26 @@
       '<section class="grid">' + P.map(function (p, i) {
         return '<a class="card" href="#/p/' + p.slug + '"><div class="ph"><img src="' + src(p, 1) + '" alt="' + esc(p.title) + '" loading="' + (i < 2 ? "eager" : "lazy") + '"></div>' +
           '<div class="cap"><span class="num">' + pad(i + 1) + '</span><span class="ttl">' + esc(p.title) + '</span><span class="sub">' + esc(p.type.split(" · ")[0]) + '</span></div></a>';
-      }).join("") + "</section>";
+      }).join("") + "</section>" +
+      '<section class="teaser"><h2 class="sec">BIM + IA</h2>' + extLink(B.course.works[0]) + extLink(B.personal[0]) +
+      '<a class="more" href="#/bim">Ver sección BIM + IA →</a></section>';
+  }
+
+  function extLink(w) {
+    return '<a class="ext" href="' + w.url + '" target="_blank" rel="noopener"><span class="t">' + esc(w.title) + '</span><span class="s">' + esc(w.sub) + '</span><span class="arr">↗</span></a>';
+  }
+
+  function bim() {
+    document.title = "BIM + IA — Matías Álvarez Cifuentes";
+    var c = B.course;
+    var work = function (w) {
+      return '<a class="work" href="' + w.url + '" target="_blank" rel="noopener"><div><b>' + esc(w.title) + '</b><span class="s">' + esc(w.sub) + "</span></div><p>" + esc(w.text) + '</p><span class="go">Abrir ↗</span></a>';
+    };
+    app.innerHTML =
+      '<section class="page"><div><h1>BIM + IA</h1><p class="lead">' + esc(B.intro) + "</p></div><div>" +
+      '<div class="block"><h2 class="sec">Curso</h2><div class="course"><b>' + esc(c.name) + '</b> <span class="org">· ' + esc(c.org) + '</span><p class="meta">' + esc(c.meta) + "</p><p>" + esc(c.text) + "</p></div>" +
+      c.works.map(work).join("") + "</div>" +
+      '<div class="block"><h2 class="sec">Trabajos personales</h2>' + B.personal.map(work).join("") + "</div></div></section>";
   }
 
   function project(slug) {
@@ -50,7 +69,7 @@
       }).join("") + "</div>" +
       '<div class="block"><h2 class="sec">Herramientas</h2><dl class="kv">' + PR.skills.map(function (s) {
         return "<dt>" + esc(s[0]) + "</dt><dd>" + esc(s[1]) + "</dd>";
-      }).join("") + "<dt>Idiomas</dt><dd>" + esc(PR.languages) + "</dd></dl></div></div></section>";
+      }).join("") + "<dt>Idiomas</dt><dd>" + esc(PR.languages) + '</dd></dl></div><div class="block"><h2 class="sec">BIM + IA</h2><p class="lead" style="margin:0 0 12px">' + esc(B.course.name) + " · " + esc(B.course.org) + ", 2026.</p>" + extLink(B.course.works[0]) + extLink(B.personal[0]) + "</div></div></section>";
   }
 
   function contacto() {
@@ -66,10 +85,11 @@
     var h = location.hash.replace(/^#\/?/, ""), parts = h.split("/");
     closeLb();
     if (parts[0] === "p" && parts[1]) project(parts[1]);
+    else if (parts[0] === "bim") bim();
     else if (parts[0] === "perfil") perfil();
     else if (parts[0] === "contacto") contacto();
     else home();
-    var on = parts[0] === "perfil" ? "perfil" : parts[0] === "contacto" ? "contacto" : "proyectos";
+    var on = ["perfil", "contacto", "bim"].indexOf(parts[0]) >= 0 ? parts[0] : "proyectos";
     document.querySelectorAll("[data-nav]").forEach(function (a) { a.classList.toggle("on", a.dataset.nav === on); });
     window.scrollTo(0, 0);
   }

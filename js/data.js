@@ -54,3 +54,30 @@ window.CONTACT = {
   linkedin: "https://www.linkedin.com/in/matias-alvarez-arq",
   location: "Talca, Región del Maule, Chile"
 };
+
+// Sección "BIM + IA": trabajos del curso y trabajos personales (enlaces externos).
+window.BIM = {
+  intro: "Mi trabajo con metodología BIM e inteligencia artificial: la entrega final del workshop BIM + Claude IA y herramientas propias para trabajar con modelos IFC.",
+  course: {
+    name: "Workshop BIM + Claude IA",
+    org: "The BIM Co-Work",
+    meta: "40 h · Ago – Nov 2026",
+    text: "Curso sobre el uso de IA en el flujo de trabajo BIM: prompts, especificaciones técnicas, revisión normativa, análisis de planos y MCP.",
+    works: [
+      {
+        title: "Pausa Maule — Entrega final",
+        sub: "Habitáculo para ciclistas · Talca, Región del Maule",
+        text: "Punto de descanso para ciclistas de ruta: un volumen con patio central bajo una retícula de nueve cuadrantes. Incluye concepto, planimetría, materialidad, documentación técnica (PEB, NDI, nomenclatura IFC), proveedores y el modelo Revit con cantidades y visor IFC.",
+        url: "https://malvarez2890-lang.github.io/pausa-maule/"
+      }
+    ]
+  },
+  personal: [
+    {
+      title: "Visor IFC en línea",
+      sub: "Herramienta gratuita",
+      text: "Abre un archivo IFC y lo explora en 3D: giros, zoom, cortes y medición de distancias; activa o desactiva capas y consulta las propiedades de cada pieza. Todo se procesa en tu equipo, el archivo no sale del navegador.",
+      url: "https://malvarez2890-lang.github.io/visor-ifc/"
+    }
+  ]
+};
