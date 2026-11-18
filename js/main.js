@@ -68,14 +68,20 @@
     var p = all, prev = G[(i - 1 + G.length) % G.length], next = G[(i + 1) % G.length];
     document.title = p.title + " — Matías Álvarez Cifuentes";
     var meta = [p.type, p.place, p.year].filter(Boolean).map(function (m) { return "<span>" + esc(m) + "</span>"; }).join("");
-    var figs = "";
-    for (var k = 1; k <= p.n; k++) {
-      figs += '<figure data-i="' + (k - 1) + '"' + (p.wide && p.wide.indexOf(k) >= 0 ? ' class="wide"' : "") + '><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
+    var fig = function (k) {
+      var ar = p.ar && p.ar[k];
+      return '<figure data-i="' + (k - 1) + '"' + (p.wide && p.wide.indexOf(k) >= 0 ? ' class="wide"' : "") + (ar ? ' style="--ar:' + ar + '"' : "") + '><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
+    };
+    var figs = "", k;
+    if (p.rows) {
+      p.rows.forEach(function (r) { figs += '<div class="jrow' + (r.length === 1 ? " one" : "") + '">' + r.map(fig).join("") + "</div>"; });
+    } else {
+      for (k = 1; k <= p.n; k++) figs += fig(k);
     }
     app.innerHTML =
       '<section class="proj-head"><div><a class="back" href="#/' + (isSvc(p) ? "planimetria" : "") + '">← ' + (isSvc(p) ? esc(S.title) : "Proyectos") + '</a><h1>' + esc(p.title) + "</h1></div>" +
       '<div><p class="meta">' + meta + "</p>" + (p.text ? '<div class="desc" style="margin-top:20px">' + p.text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" : "") + "</div></section>" +
-      '<section class="gallery">' + figs + "</section>" +
+      '<section class="gallery' + (p.rows ? " rows" : "") + '">' + figs + "</section>" +
       '<nav class="pager"><a href="#/p/' + prev.slug + '">← Anterior<small>' + esc(prev.title) + '</small></a><a class="r" href="#/p/' + next.slug + '">Siguiente →<small>' + esc(next.title) + "</small></a></nav>";
     app.querySelectorAll("figure").forEach(function (f) {
       f.addEventListener("click", function () { openLb(p, +f.dataset.i); });

@@ -3,7 +3,9 @@
 window.PROJECTS = [
   {
     slug: "haras-huilquilemu", title: "Vivienda Haras de Huilquilemu", type: "Habitacional · Vivienda", place: "Haras de Huilquilemu", year: "2026", n: 13,
-    wide: [1, 10, 11, 12, 13],
+    // rows: filas de la galería (números de imagen). ar: proporción ancho/alto de cada imagen, para alinear las alturas de cada fila.
+    rows: [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10], [11], [12], [13]],
+    ar: { 1: 1.339, 2: 1.339, 3: 1.25, 4: 1.25, 5: 1.25, 6: 1.339, 7: 1.25, 8: 1.339, 9: 0.8, 10: 1.41, 11: 1.41, 12: 1.41, 13: 1.41 },
     text: ["Vivienda de un nivel en el Haras de Huilquilemu, organizada en tres cuerpos de cubierta inclinada que se articulan en torno a terrazas y una piscina. Un volumen reúne el estacionamiento cubierto y los recintos de servicio; otro, la cocina, el comedor, el living y el dormitorio principal; y un tercero, girado en diagonal hacia el terreno, los dormitorios y un estar.", "Estructura de pino radiado con revestimiento vertical de WPC color negro, amplios paños vidriados hacia el jardín y la terraza, y el piso elevado sobre el terreno natural. Suma 173 m² útiles. Se presentan renders exteriores e interiores, axonométrica, planta, elevaciones, cortes, escantillón y cuadros de superficies.", "Proyecto realizado en conjunto con Natalia Herrera."]
   },
   { slug: "vivienda-ac", title: "Vivienda AC", type: "Habitacional · Vivienda", n: 16,
