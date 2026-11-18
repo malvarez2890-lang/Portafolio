@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "4";
+window.SITE_VERSION = "5";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -48,17 +48,20 @@ window.PROJECTS = [
   },
   {
     slug: "oficina-408", group: "planimetria", title: "Oficina 408", type: "Regularización · Oficina", place: "Talca", year: "2026", n: 4,
-    wide: [3, 4],
+    rows: [[1, 2], [3], [4]],
+    ar: {1: 1.57, 2: 1.532, 3: 1.415, 4: 1.415},
     text: ["Regularización de la planimetría de una oficina de 91 m² en el cuarto piso de un edificio en Talca. Se levantó el estado actual de los recintos: cinco oficinas, recepción, tres baños, kitchenette, bodega de archivos y bodega de aseo, con 76 m² útiles.", "Se presentan la planta de arquitectura, el cuadro de superficies por recinto, el emplazamiento dentro del piso, cortes e isométricas seccionadas. El mobiliario se muestra solo como referencia de uso."]
   },
   {
     slug: "consulta-kinesiologica", group: "planimetria", title: "Consulta Kinesiológica", type: "Regularización · Salud", year: "2026", n: 4,
-    wide: [1, 4],
+    rows: [[1], [2, 3], [4]],
+    ar: {1: 4.558, 2: 1.471, 3: 1.176, 4: 1.667},
     text: ["Regularización de la planimetría de una consulta kinesiológica de 94 m², realizada para su presentación ante la autoridad sanitaria (MINSAL) en la tramitación de patentes de funcionamiento.", "Se levantó el estado actual de los recintos: sala de espera, recepción, cuatro boxes con camilla, gimnasio, área limpia y sucia, comedor, circulación y un baño universal accesible con rampa de 8 % de pendiente. Se presentan la planta de arquitectura, el cuadro de superficies, una isométrica seccionada y el detalle del baño universal."]
   },
   {
     slug: "centro-comercial", group: "planimetria", title: "Centro Comercial", type: "Equipamiento · Centro comercial", year: "2026", n: 11,
-    wide: [1, 6, 7, 8, 9, 10, 11],
+    rows: [[1], [2, 3], [4, 5], [6], [7], [8], [9], [10], [11]],
+    ar: {1: 1.631, 2: 0.777, 3: 0.819, 4: 1.447, 5: 0.413, 6: 1.413, 7: 1.413, 8: 1.413, 9: 1.413, 10: 1.413, 11: 1.413},
     text: ["Centro comercial de un nivel organizado en torno a un patio interior de mesas, con ocho locales distribuidos en tres de sus lados, baños y estacionamientos, además de accesos peatonal y vehicular. Una cubierta continua de líneas quebradas envuelve el conjunto, y celosías verticales marcan los accesos. Suma 395 m² útiles en 1.142 m² brutos.", "Proyecto de arquitectura de Spreaad Arquitectos, a cargo de la arquitecta Blanca Zúñiga. Modelación BIM: Matías Álvarez Cifuentes. Se presentan axonométricas, plantas, cubierta, elevaciones, cortes, vistas 3D, detalle de ventanas y puertas, planta de cielo reflejado y plantas eléctricas."]
   },
   {
@@ -68,6 +71,8 @@ window.PROJECTS = [
     place: "Corralones, San Clemente, Región del Maule",
     year: "2019–2020",
     n: 9,
+    rows: [[1, 2], [3, 4], [5, 6], [7], [8, 9]],
+    ar: {1: 1.78, 2: 1.334, 3: 1.453, 4: 1.486, 5: 1.396, 6: 1.383, 7: 1.434, 8: 1.308, 9: 1.318},
     text: [
       "Obra de la Escuela de Arquitectura de la Universidad de Talca, ubicada en el villorrio El Olivo, en Corralones, formado hace más de 30 años por un grupo de personas que vivían alrededor de la zona.",
       "El proyecto nace de la propuesta de poner en valor el espacio público de la comunidad, que se encontraba en condiciones inhóspitas: una cancha autoconstruida en mal estado, usada como basural y como vía alternativa para vehículos.",
