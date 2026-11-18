@@ -15,7 +15,7 @@ window.PROJECTS = [
   {
     slug: "tiny-house", title: "Tiny House", type: "Habitacional · Tiny house", place: "Vilches, San Clemente", year: "2025", n: 9,
     wide: [1, 4, 5, 6, 7, 8, 9],
-    text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de madera sobre entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera."]
+    text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de madera sobre entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera. Obra construida."]
   },
   { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
     text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Proyecto realizado en conjunto con Victor Luarte."]
@@ -28,6 +28,11 @@ window.PROJECTS = [
   },
   { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 5,
     text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
+  },
+  {
+    slug: "centro-comercial", title: "Centro Comercial", type: "Equipamiento · Centro comercial", year: "2026", n: 11,
+    wide: [1, 6, 7, 8, 9, 10, 11],
+    text: ["Centro comercial de un nivel organizado en torno a un patio interior de mesas, con ocho locales distribuidos en tres de sus lados, baños y estacionamientos, además de accesos peatonal y vehicular. Una cubierta continua de líneas quebradas envuelve el conjunto, y celosías verticales marcan los accesos. Suma 395 m² útiles en 1.142 m² brutos.", "Proyecto de arquitectura de Spreaad Arquitectos, a cargo de la arquitecta Blanca Zúñiga. Modelación BIM: Matías Álvarez Cifuentes. Se presentan axonométricas, plantas, cubierta, elevaciones, cortes, vistas 3D, detalle de ventanas y puertas, planta de cielo reflejado y plantas eléctricas."]
   },
   {
     slug: "confluencia",
