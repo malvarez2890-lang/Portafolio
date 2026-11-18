@@ -1,6 +1,24 @@
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
+  { slug: "vivienda-ac", title: "Vivienda AC", type: "Habitacional · Vivienda", n: 16,
+    text: ["Vivienda de un nivel revestida en tablas verticales oscuras y organizada en torno a un patio central con lucarna, que lleva luz natural y vegetación al interior. Un volumen superior de iluminación cenital corona la cubierta.", "Incluye planta, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
+  },
+  { slug: "vivienda-nw", title: "Vivienda NW", type: "Habitacional · Vivienda", n: 11,
+    text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
+  },
+  { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
+    text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica."]
+  },
+  { slug: "melipeuco", title: "Cabaña en Melipeuco", type: "Habitacional · Cabaña", place: "Melipeuco", n: 11,
+    text: ["Cabaña de planta alargada en Melipeuco, emplazada entre árboles. Su cubierta de una sola agua, el revestimiento de madera y los ventanales corridos la abren al bosque, con una terraza cubierta a lo largo de la fachada.", "El proyecto incluye emplazamiento, planta, elevaciones, cortes, axonométrica estructural y renders exteriores e interiores."]
+  },
+  { slug: "loanco", title: "Vivienda en Loanco", type: "Habitacional · Vivienda", place: "Loanco", n: 8,
+    text: ["Vivienda de dos niveles en Loanco, formada por volúmenes de madera y paños oscuros que se desplazan entre sí. Hacia el acceso, una galería con pérgola y vegetación suaviza el encuentro con el jardín.", "Se presentan plantas de ambos niveles, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
+  },
+  { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 5,
+    text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
+  },
   {
     slug: "confluencia",
     title: "Confluencia en Potencia",
@@ -14,27 +32,6 @@ window.PROJECTS = [
       "La obra se inserta en el espacio poniendo en valor no solo el espacio público, sino también el valle y el paisaje, con carácter de conector visual. Extraer la tierra del lugar y moldear el terreno en distintas alturas fortalece el espacio público: el uso se centra en la persona que recorre caminando o en bicicleta.",
       "Un recorrido casi sin fin —subir, bajar, bajar más aún y volver a subir— es como confluyen las personas."
     ]
-  },
-  { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
-    text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica."]
-  },
-  { slug: "melipeuco", title: "Cabaña en Melipeuco", type: "Habitacional · Cabaña", place: "Melipeuco", n: 11,
-    text: ["Cabaña de planta alargada en Melipeuco, emplazada entre árboles. Su cubierta de una sola agua, el revestimiento de madera y los ventanales corridos la abren al bosque, con una terraza cubierta a lo largo de la fachada.", "El proyecto incluye emplazamiento, planta, elevaciones, cortes, axonométrica estructural y renders exteriores e interiores."]
-  },
-  { slug: "loanco", title: "Vivienda en Loanco", type: "Habitacional · Vivienda", place: "Loanco", n: 8,
-    text: ["Vivienda de dos niveles en Loanco, formada por volúmenes de madera y paños oscuros que se desplazan entre sí. Hacia el acceso, una galería con pérgola y vegetación suaviza el encuentro con el jardín.", "Se presentan plantas de ambos niveles, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
-  },
-  { slug: "vivienda-nw", title: "Vivienda NW", type: "Habitacional · Vivienda", n: 11,
-    text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
-  },
-  { slug: "quincho-ac", title: "Quincho AC", type: "Habitacional · Quincho", n: 5,
-    text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
-  },
-  { slug: "vivienda-ac", title: "Vivienda AC", type: "Habitacional · Vivienda", n: 16,
-    text: ["Vivienda de un nivel revestida en tablas verticales oscuras y organizada en torno a un patio central con lucarna, que lleva luz natural y vegetación al interior. Un volumen superior de iluminación cenital corona la cubierta.", "Incluye planta, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
-  },
-  { slug: "cubierta-cancha", title: "Cubierta Cancha", type: "Equipamiento", place: "Proyecto con Mutar Estudio", n: 8,
-    text: ["Cubierta para una cancha multiuso, desarrollada junto a Mutar Estudio. Una estructura liviana de cerchas metálicas sostiene la techumbre y una envolvente de paneles perforados que filtra la luz.", "Se presentan planta, elevaciones, corte, axonométrica estructural y renders exteriores e interiores."]
   }
 ];
 
