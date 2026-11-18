@@ -30,12 +30,12 @@ window.PROJECTS = [
     text: ["Quincho de planta poligonal irregular que se adapta a un terreno en pendiente, bajo una cubierta liviana inclinada.", "Se documenta con planta, elevaciones, cortes, axonométrica explotada y croquis volumétricos."]
   },
   {
-    slug: "oficina-408", title: "Oficina 408", type: "Regularización · Oficina", place: "Talca", year: "2026", n: 4,
+    slug: "oficina-408", group: "planimetria", title: "Oficina 408", type: "Regularización · Oficina", place: "Talca", year: "2026", n: 4,
     wide: [3, 4],
     text: ["Regularización de la planimetría de una oficina de 91 m² en el cuarto piso de un edificio en Talca. Se levantó el estado actual de los recintos: cinco oficinas, recepción, tres baños, kitchenette, bodega de archivos y bodega de aseo, con 76 m² útiles.", "Se presentan la planta de arquitectura, el cuadro de superficies por recinto, el emplazamiento dentro del piso, cortes e isométricas seccionadas. El mobiliario se muestra solo como referencia de uso."]
   },
   {
-    slug: "centro-comercial", title: "Centro Comercial", type: "Equipamiento · Centro comercial", year: "2026", n: 11,
+    slug: "centro-comercial", group: "planimetria", title: "Centro Comercial", type: "Equipamiento · Centro comercial", year: "2026", n: 11,
     wide: [1, 6, 7, 8, 9, 10, 11],
     text: ["Centro comercial de un nivel organizado en torno a un patio interior de mesas, con ocho locales distribuidos en tres de sus lados, baños y estacionamientos, además de accesos peatonal y vehicular. Una cubierta continua de líneas quebradas envuelve el conjunto, y celosías verticales marcan los accesos. Suma 395 m² útiles en 1.142 m² brutos.", "Proyecto de arquitectura de Spreaad Arquitectos, a cargo de la arquitecta Blanca Zúñiga. Modelación BIM: Matías Álvarez Cifuentes. Se presentan axonométricas, plantas, cubierta, elevaciones, cortes, vistas 3D, detalle de ventanas y puertas, planta de cielo reflejado y plantas eléctricas."]
   },
@@ -115,4 +115,11 @@ window.BIM = {
       url: "https://malvarez2890-lang.github.io/visor-ifc/"
     }
   ]
+};
+
+// Servicio de dibujo planimétrico y modelación BIM (proyectos para otros arquitectos y regularizaciones).
+window.SERVICE = {
+  title: "Planimetría BIM",
+  lead: "Dibujo planimétrico y modelación BIM como servicio: levantamientos, regularizaciones y planimetría de proyectos de otros arquitectos.",
+  items: ["Modelación BIM en Revit", "Planimetría de arquitectura: plantas, elevaciones y cortes", "Cuadros de superficie y láminas de presentación", "Regularizaciones y levantamiento de lo existente"]
 };

@@ -1,5 +1,7 @@
 (function () {
-  var P = window.PROJECTS, PR = window.PROFILE, C = window.CONTACT, B = window.BIM;
+  var P = window.PROJECTS, PR = window.PROFILE, C = window.CONTACT, B = window.BIM, S = window.SERVICE;
+  var isSvc = function (p) { return p.group === "planimetria"; };
+  var OWN = P.filter(function (p) { return !isSvc(p); }), SVC = P.filter(isSvc);
   var app = document.getElementById("app");
   var pad = function (n) { return String(n).padStart(2, "0"); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
@@ -16,12 +18,25 @@
     app.innerHTML =
       '<section class="hero"><h1>Arquitectura<br>vivienda, equipamiento<br>y espacio público.</h1>' +
       '<p>Matías Álvarez Cifuentes · Arquitecto BIM · Talca, Chile</p></section>' +
-      '<section class="grid">' + P.map(function (p, i) {
-        return '<a class="card" href="#/p/' + p.slug + '"><div class="ph"><img src="' + src(p, 1) + '" alt="' + esc(p.title) + '" loading="' + (i < 2 ? "eager" : "lazy") + '"></div>' +
-          '<div class="cap"><span class="num">' + pad(i + 1) + '</span><span class="ttl">' + esc(p.title) + '</span><span class="sub">' + esc(p.type.split(" · ")[0]) + '</span></div></a>';
-      }).join("") + "</section>" +
+      '<section class="grid">' + OWN.map(function (p, i) { return card(p, i, i < 2); }).join("") + "</section>" +
+      '<section class="teaser"><h2 class="sec">' + esc(S.title) + '</h2><p class="svc-lead">' + esc(S.lead) + '</p><div class="grid">' + SVC.map(function (p, i) { return card(p, i, false); }).join("") + "</div>" +
+      '<a class="more" href="#/planimetria">Ver sección ' + esc(S.title) + ' →</a></section>' +
       '<section class="teaser"><h2 class="sec">BIM + IA</h2><div class="grid">' + [B.course.works[0], B.personal[0]].map(extCard).join("") + "</div>" +
       '<a class="more" href="#/bim">Ver sección BIM + IA →</a></section>';
+  }
+
+  function card(p, i, eager) {
+    return '<a class="card" href="#/p/' + p.slug + '"><div class="ph"><img src="' + src(p, 1) + '" alt="' + esc(p.title) + '" loading="' + (eager ? "eager" : "lazy") + '"></div>' +
+      '<div class="cap"><span class="num">' + pad(i + 1) + '</span><span class="ttl">' + esc(p.title) + '</span><span class="sub">' + esc(p.type.split(" · ")[0]) + '</span></div></a>';
+  }
+
+  function planimetria() {
+    document.title = S.title + " — Matías Álvarez Cifuentes";
+    app.innerHTML =
+      '<section class="hero"><h1>' + esc(S.title) + '</h1><p>Servicio · Dibujo y modelación para otros arquitectos</p></section>' +
+      '<section class="svc"><p class="lead">' + esc(S.lead) + '</p><ul class="svc-list">' + S.items.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + '</ul>' +
+      '<a class="more" href="#/contacto">Cotizar un trabajo →</a></section>' +
+      '<section class="grid">' + SVC.map(function (p, i) { return card(p, i, i < 2); }).join("") + "</section>";
   }
 
   function extCard(w) {
@@ -47,9 +62,10 @@
   }
 
   function project(slug) {
-    var i = P.findIndex(function (p) { return p.slug === slug; });
-    if (i < 0) return home();
-    var p = P[i], prev = P[(i - 1 + P.length) % P.length], next = P[(i + 1) % P.length];
+    var all = P.find(function (q) { return q.slug === slug; });
+    if (!all) return home();
+    var G = isSvc(all) ? SVC : OWN, i = G.indexOf(all);
+    var p = all, prev = G[(i - 1 + G.length) % G.length], next = G[(i + 1) % G.length];
     document.title = p.title + " — Matías Álvarez Cifuentes";
     var meta = [p.type, p.place, p.year].filter(Boolean).map(function (m) { return "<span>" + esc(m) + "</span>"; }).join("");
     var figs = "";
@@ -57,7 +73,7 @@
       figs += '<figure data-i="' + (k - 1) + '"' + (p.wide && p.wide.indexOf(k) >= 0 ? ' class="wide"' : "") + '><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
     }
     app.innerHTML =
-      '<section class="proj-head"><div><a class="back" href="#/">← Proyectos</a><h1>' + esc(p.title) + "</h1></div>" +
+      '<section class="proj-head"><div><a class="back" href="#/' + (isSvc(p) ? "planimetria" : "") + '">← ' + (isSvc(p) ? esc(S.title) : "Proyectos") + '</a><h1>' + esc(p.title) + "</h1></div>" +
       '<div><p class="meta">' + meta + "</p>" + (p.text ? '<div class="desc" style="margin-top:20px">' + p.text.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") + "</div>" : "") + "</div></section>" +
       '<section class="gallery">' + figs + "</section>" +
       '<nav class="pager"><a href="#/p/' + prev.slug + '">← Anterior<small>' + esc(prev.title) + '</small></a><a class="r" href="#/p/' + next.slug + '">Siguiente →<small>' + esc(next.title) + "</small></a></nav>";
@@ -96,11 +112,13 @@
     var h = location.hash.replace(/^#\/?/, ""), parts = h.split("/");
     closeLb();
     if (parts[0] === "p" && parts[1]) project(parts[1]);
+    else if (parts[0] === "planimetria") planimetria();
     else if (parts[0] === "bim") bim();
     else if (parts[0] === "perfil") perfil();
     else if (parts[0] === "contacto") contacto();
     else home();
-    var on = ["perfil", "contacto", "bim"].indexOf(parts[0]) >= 0 ? parts[0] : "proyectos";
+    var cp = parts[0] === "p" && P.find(function (q) { return q.slug === parts[1]; });
+    var on = ["perfil", "contacto", "bim", "planimetria"].indexOf(parts[0]) >= 0 ? parts[0] : (cp && isSvc(cp) ? "planimetria" : "proyectos");
     document.querySelectorAll("[data-nav]").forEach(function (a) { a.classList.toggle("on", a.dataset.nav === on); });
     window.scrollTo(0, 0);
   }
