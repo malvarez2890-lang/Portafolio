@@ -7,10 +7,6 @@
   --track: .18em;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #111; --fg: #ececec; --muted: #8b8b8b; --line: #2a2a2a; }
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
