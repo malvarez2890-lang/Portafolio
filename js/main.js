@@ -5,6 +5,9 @@
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var src = function (p, i) { return "img/" + p.slug + "/" + pad(i) + ".jpg"; };
 
+  var soc = document.getElementById("social");
+  soc.innerHTML = [["LinkedIn", C.linkedin], ["Instagram", C.instagram], ["WhatsApp", C.whatsapp]].filter(function (x) { return x[1]; })
+    .map(function (x) { return '<a href="' + x[1] + '" target="_blank" rel="noopener">' + x[0] + "</a>"; }).join("");
   document.getElementById("year").textContent = new Date().getFullYear();
 
   function home() {
@@ -78,7 +81,9 @@
       '<section class="page"><div><h1>Contacto</h1><p class="lead">' + esc(C.location) + '.<br>Disponible para proyectos de arquitectura, modelado BIM y regularizaciones.</p></div>' +
       '<div class="contact"><a class="big" href="mailto:' + C.email + '"><small>Correo</small>' + esc(C.email) + "</a>" +
       '<a class="big" href="tel:' + C.phoneHref + '"><small>Teléfono</small>' + esc(C.phone) + "</a>" +
-      '<a class="big" href="' + C.linkedin + '" target="_blank" rel="noopener"><small>LinkedIn</small>matias-alvarez-arq</a></div></section>';
+      '<a class="big" href="' + C.linkedin + '" target="_blank" rel="noopener"><small>LinkedIn</small>matias-alvarez-arq</a>' +
+      (C.instagram ? '<a class="big" href="' + C.instagram + '" target="_blank" rel="noopener"><small>Instagram</small>' + esc(C.instagram.replace(/^https?:\/\/(www\.)?instagram\.com\//, "@").replace(/\/$/, "")) + "</a>" : "") +
+      '<a class="big" href="' + C.whatsapp + '" target="_blank" rel="noopener"><small>WhatsApp</small>Escribir un mensaje</a></div></section>';
   }
 
   function route() {

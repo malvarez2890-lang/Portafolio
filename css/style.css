@@ -145,3 +145,7 @@ a.work p { margin: 10px 0 12px; max-width: 640px; font-size: 14px; color: var(--
 a.work .go { font-size: 12px; text-transform: uppercase; letter-spacing: .24em; }
 @media (max-width: 820px) { a.ext { grid-template-columns: 1fr 24px; } a.ext .s { display: none; } }
 h2.sec + a.work { border-top: 0; }
+.foot { align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.social { display: flex; gap: 22px; }
+.social a { transition: color .2s; }
+.social a:hover { color: var(--fg); }
