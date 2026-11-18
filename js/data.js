@@ -12,6 +12,11 @@ window.PROJECTS = [
   { slug: "vivienda-nw", title: "Vivienda NW", type: "Habitacional · Vivienda", n: 11,
     text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Obra construida."]
   },
+  {
+    slug: "tiny-house", title: "Tiny House", type: "Habitacional · Tiny house", place: "Vilches, San Clemente", year: "2025", n: 9,
+    wide: [1, 4, 5, 6, 7, 8, 9],
+    text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de madera sobre entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera."]
+  },
   { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
     text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Proyecto realizado en conjunto con Victor Luarte."]
   },
