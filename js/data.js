@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "8";
+window.SITE_VERSION = "9";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -26,9 +26,9 @@ window.PROJECTS = [
     ar: {1: 1.5, 2: 1.5, 3: 0.667, 4: 1.674, 5: 1.674, 6: 1.674, 7: 1.674, 8: 1.674, 9: 1.674},
     text: ["Tiny house de 34 m² emplazada en una ladera en Vilches, San Clemente. Tres volúmenes de cubierta de una sola agua se articulan en ángulo y se elevan sobre pilares circulares de madera, apoyados en la pendiente, para abrir el living, el comedor y la cocina hacia un gran ventanal de marco de madera negra que enmarca el paisaje.", "El programa se resuelve en un solo nivel: living, comedor y cocina (18 m²), dormitorio y baño, con una terraza de acceso. Estructura de tabiquería de madera sobre pilares de madera, con entramado de vigas, cubierta de plancha de zinc aluminio y revestimiento vertical de madera. Se presentan imágenes del proyecto, vistas y axonométricas, planta, cubierta y entramado de piso, elevaciones, cortes y el detalle de ventanas y puertas.", "Proyecto realizado en conjunto con Natalia Herrera. Obra construida."]
   },
-  { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
-    rows: [[1], [2, 3], [4, 5], [6], [7, 8], [9]],
-    ar: {1: 1.777, 2: 1.777, 3: 1, 4: 1.549, 5: 1.383, 6: 1.449, 7: 1.578, 8: 0.914, 9: 1.639},
+  { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 10,
+    rows: [[1], [2, 3], [4], [5, 6], [7], [8, 9], [10]],
+    ar: {1: 1.778, 2: 1.778, 3: 1.0, 4: 1.814, 5: 1.549, 6: 1.383, 7: 1.449, 8: 1.578, 9: 0.914, 10: 1.639},
     text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Estructura de acero y metalcón.", "Proyecto realizado en conjunto con Victor Luarte."]
   },
   { slug: "melipeuco", title: "Cabaña en Melipeuco", type: "Habitacional · Cabaña", place: "Melipeuco", n: 11,
