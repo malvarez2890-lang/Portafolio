@@ -122,6 +122,11 @@
     else if (e.key === "ArrowLeft") step(-1);
   });
 
+  // Al recargar la página, volver siempre al inicio (los enlaces directos siguen funcionando).
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+  if (nav && nav.type === "reload" && location.hash) history.replaceState(null, "", location.pathname + location.search);
+
   window.addEventListener("hashchange", route);
   route();
 })();
