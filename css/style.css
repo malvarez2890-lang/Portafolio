@@ -156,3 +156,5 @@ a.work:hover .wph img { transform: scale(1.035); }
 .teaser .card .ph { aspect-ratio: 16 / 10; }
 .teaser .card .cap { flex-wrap: wrap; gap: 4px 18px; }
 .teaser .card .sub { margin-left: 0; width: 100%; text-align: left; }
+
+.gallery figure.wide { grid-column: 1 / -1; }

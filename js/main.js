@@ -54,7 +54,7 @@
     var meta = [p.type, p.place, p.year].filter(Boolean).map(function (m) { return "<span>" + esc(m) + "</span>"; }).join("");
     var figs = "";
     for (var k = 1; k <= p.n; k++) {
-      figs += '<figure data-i="' + (k - 1) + '"><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
+      figs += '<figure data-i="' + (k - 1) + '"' + (p.wide && p.wide.indexOf(k) >= 0 ? ' class="wide"' : "") + '><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
     }
     app.innerHTML =
       '<section class="proj-head"><div><a class="back" href="#/">← Proyectos</a><h1>' + esc(p.title) + "</h1></div>" +

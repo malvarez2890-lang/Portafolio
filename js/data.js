@@ -1,6 +1,11 @@
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
-// "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
+// "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
+  {
+    slug: "haras-huilquilemu", title: "Vivienda Haras de Huilquilemu", type: "Habitacional · Vivienda", place: "Haras de Huilquilemu", year: "2026", n: 13,
+    wide: [1, 10, 11, 12, 13],
+    text: ["Vivienda de un nivel en el Haras de Huilquilemu, organizada en tres cuerpos de cubierta inclinada que se articulan en torno a terrazas y una piscina. Un volumen reúne el estacionamiento cubierto y los recintos de servicio; otro, la cocina, el comedor, el living y el dormitorio principal; y un tercero, girado en diagonal hacia el terreno, los dormitorios y un estar.", "Estructura de pino radiado con revestimiento vertical de WPC color negro, amplios paños vidriados hacia el jardín y la terraza, y el piso elevado sobre el terreno natural. Suma 173 m² útiles. Se presentan renders exteriores e interiores, axonométrica, planta, elevaciones, cortes, escantillón y cuadros de superficies."]
+  },
   { slug: "vivienda-ac", title: "Vivienda AC", type: "Habitacional · Vivienda", n: 16,
     text: ["Vivienda de un nivel revestida en tablas verticales oscuras y organizada en torno a un patio central con lucarna, que lleva luz natural y vegetación al interior. Un volumen superior de iluminación cenital corona la cubierta.", "Incluye planta, elevaciones, cortes, axonométrica y renders exteriores e interiores."]
   },
