@@ -68,7 +68,7 @@ window.CONTACT = {
   linkedin: "https://www.linkedin.com/in/matias-alvarez-arq",
   location: "Talca, Región del Maule, Chile",
   whatsapp: "https://wa.me/56964949455",
-  instagram: "" // pega aquí tu perfil, ej: "https://www.instagram.com/tu_usuario"
+  instagram: "https://www.instagram.com/matias_arq_"
 };
 
 // Sección "BIM + IA": trabajos del curso y trabajos personales (enlaces externos).
