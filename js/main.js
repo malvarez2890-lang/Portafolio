@@ -5,8 +5,9 @@
   var app = document.getElementById("app");
   var pad = function (n) { return String(n).padStart(2, "0"); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var src = function (p, i) { return "img/" + p.slug + "/" + pad(i) + ".jpg"; };
-  var full = function (p, i) { return "img/" + p.slug + "/full/" + pad(i) + ".jpg"; };
+  var V = "?v=" + (window.SITE_VERSION || "1");
+  var src = function (p, i) { return "img/" + p.slug + "/" + pad(i) + ".jpg" + V; };
+  var full = function (p, i) { return "img/" + p.slug + "/full/" + pad(i) + ".jpg" + V; };
 
   var soc = document.getElementById("social");
   soc.innerHTML = [["LinkedIn", C.linkedin], ["Instagram", C.instagram], ["WhatsApp", C.whatsapp]].filter(function (x) { return x[1]; })
@@ -40,7 +41,7 @@
   }
 
   function extCard(w) {
-    return '<a class="card" href="' + w.url + '" target="_blank" rel="noopener"><div class="ph"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy"></div>' +
+    return '<a class="card" href="' + w.url + '" target="_blank" rel="noopener"><div class="ph"><img src="' + w.img + V + '" alt="' + esc(w.title) + '" loading="lazy"></div>' +
       '<div class="cap"><span class="ttl">' + esc(w.title) + '</span><span class="sub">' + esc(w.sub) + " ↗</span></div></a>";
   }
 
@@ -52,7 +53,7 @@
     document.title = "BIM + IA — Matías Álvarez Cifuentes";
     var c = B.course;
     var work = function (w) {
-      return '<a class="work" href="' + w.url + '" target="_blank" rel="noopener">' + (w.img ? '<div class="wph"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy"></div>' : "") + '<div><b>' + esc(w.title) + '</b><span class="s">' + esc(w.sub) + "</span></div><p>" + esc(w.text) + '</p><span class="go">Abrir ↗</span></a>';
+      return '<a class="work" href="' + w.url + '" target="_blank" rel="noopener">' + (w.img ? '<div class="wph"><img src="' + w.img + V + '" alt="' + esc(w.title) + '" loading="lazy"></div>' : "") + '<div><b>' + esc(w.title) + '</b><span class="s">' + esc(w.sub) + "</span></div><p>" + esc(w.text) + '</p><span class="go">Abrir ↗</span></a>';
     };
     app.innerHTML =
       '<section class="page"><div><h1>BIM + IA</h1><p class="lead">' + esc(B.intro) + "</p></div><div>" +
