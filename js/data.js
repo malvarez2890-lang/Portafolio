@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "7";
+window.SITE_VERSION = "8";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -28,7 +28,7 @@ window.PROJECTS = [
   },
   { slug: "pataguas", title: "Vivienda en Las Pataguas", type: "Habitacional · Vivienda", place: "Las Pataguas", n: 9,
     rows: [[1], [2, 3], [4, 5], [6], [7, 8], [9]],
-    ar: {1: 1.812, 2: 1.814, 3: 0.997, 4: 1.549, 5: 1.383, 6: 1.449, 7: 1.578, 8: 0.914, 9: 1.639},
+    ar: {1: 1.777, 2: 1.777, 3: 1, 4: 1.549, 5: 1.383, 6: 1.449, 7: 1.578, 8: 0.914, 9: 1.639},
     text: ["Vivienda unifamiliar de un nivel en Las Pataguas, compuesta por volúmenes de techumbre a dos aguas que se enlazan en planta y se abren con grandes paños vidriados hacia el paisaje.", "Combina revestimientos de tonos cálidos con una cubierta oscura y un cobertizo para vehículos integrado al conjunto. Se documenta con emplazamiento, planta, elevaciones, cortes y axonométrica.", "Estructura de acero y metalcón.", "Proyecto realizado en conjunto con Victor Luarte."]
   },
   { slug: "melipeuco", title: "Cabaña en Melipeuco", type: "Habitacional · Cabaña", place: "Melipeuco", n: 11,
