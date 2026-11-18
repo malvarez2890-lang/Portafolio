@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "5";
+window.SITE_VERSION = "6";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -17,7 +17,7 @@ window.PROJECTS = [
   },
   { slug: "vivienda-nw", title: "Vivienda NW", type: "Habitacional · Vivienda", n: 11,
     rows: [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10, 11]],
-    ar: {1: 1.777, 2: 1.789, 3: 1.772, 4: 1.789, 5: 1.415, 6: 1.388, 7: 1.569, 8: 1.038, 9: 1.358, 10: 1.282, 11: 1.291},
+    ar: {1: 1.778, 2: 1.778, 3: 1.778, 4: 1.778, 5: 1.415, 6: 1.388, 7: 1.569, 8: 1.038, 9: 1.358, 10: 1.282, 11: 1.291},
     text: ["Vivienda de dos niveles de volúmenes blancos y líneas puras: un cuerpo alto y otro bajo con pérgola de madera, que se abren al jardín mediante ventanas y una celosía vertical que marca el acceso.", "Incluye plantas, elevaciones, cortes, axonométrica y renders exteriores e interiores.", "Estructura de albañilería.", "Obra construida."]
   },
   {
