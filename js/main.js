@@ -16,7 +16,7 @@
   function home() {
     document.title = "Matías Álvarez Cifuentes — Arquitecto";
     app.innerHTML =
-      '<section class="hero"><h1>Arquitectura<br>vivienda, equipamiento<br>y espacio público.</h1>' +
+      '<section class="hero"><h1>Arquitectura<br>vivienda<br>y modelación BIM.</h1>' +
       '<p>Matías Álvarez Cifuentes · Arquitecto BIM · Talca, Chile</p></section>' +
       '<section class="grid">' + OWN.map(function (p, i) { return card(p, i, i < 2); }).join("") + "</section>" +
       '<section class="teaser"><h2 class="sec">' + esc(S.title) + '</h2><p class="svc-lead">' + esc(S.lead) + '</p><div class="grid">' + SVC.map(function (p, i) { return card(p, i, false); }).join("") + "</div>" +
