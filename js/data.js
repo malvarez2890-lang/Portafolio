@@ -63,7 +63,7 @@ window.PROJECTS = [
 ];
 
 window.PROFILE = {
-  intro: "Arquitecto titulado de la Universidad de Talca con más de seis años de experiencia en proyectos de arquitectura, metodología BIM y documentación técnica. Trabajo en vivienda, edificación y equipamiento, y hoy me desempeño como arquitecto BIM en el Hospital Regional de Talca.",
+  intro: "Arquitecto titulado de la Universidad de Talca con más de seis años de experiencia en proyectos de arquitectura, metodología BIM y documentación técnica. Trabajo en vivienda y modelación BIM, y hoy me desempeño como arquitecto BIM en el Hospital Regional de Talca.",
   experience: [
     ["2025 — Actualidad", "Arquitecto BIM", "Hospital Regional de Talca", "Modelado en Revit de la infraestructura interna del hospital y actualización de la planimetría oficial."],
     ["2023 — 2025", "Arquitecto", "La Provincia SpA, Talca", "Proyectos de vivienda, edificios y equipamiento; regularizaciones y tramitación municipal."],
