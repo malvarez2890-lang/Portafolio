@@ -20,8 +20,13 @@
         return '<a class="card" href="#/p/' + p.slug + '"><div class="ph"><img src="' + src(p, 1) + '" alt="' + esc(p.title) + '" loading="' + (i < 2 ? "eager" : "lazy") + '"></div>' +
           '<div class="cap"><span class="num">' + pad(i + 1) + '</span><span class="ttl">' + esc(p.title) + '</span><span class="sub">' + esc(p.type.split(" · ")[0]) + '</span></div></a>';
       }).join("") + "</section>" +
-      '<section class="teaser"><h2 class="sec">BIM + IA</h2>' + extLink(B.course.works[0]) + extLink(B.personal[0]) +
+      '<section class="teaser"><h2 class="sec">BIM + IA</h2><div class="grid">' + [B.course.works[0], B.personal[0]].map(extCard).join("") + "</div>" +
       '<a class="more" href="#/bim">Ver sección BIM + IA →</a></section>';
+  }
+
+  function extCard(w) {
+    return '<a class="card" href="' + w.url + '" target="_blank" rel="noopener"><div class="ph"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy"></div>' +
+      '<div class="cap"><span class="ttl">' + esc(w.title) + '</span><span class="sub">' + esc(w.sub) + " ↗</span></div></a>";
   }
 
   function extLink(w) {
@@ -32,7 +37,7 @@
     document.title = "BIM + IA — Matías Álvarez Cifuentes";
     var c = B.course;
     var work = function (w) {
-      return '<a class="work" href="' + w.url + '" target="_blank" rel="noopener"><div><b>' + esc(w.title) + '</b><span class="s">' + esc(w.sub) + "</span></div><p>" + esc(w.text) + '</p><span class="go">Abrir ↗</span></a>';
+      return '<a class="work" href="' + w.url + '" target="_blank" rel="noopener">' + (w.img ? '<div class="wph"><img src="' + w.img + '" alt="' + esc(w.title) + '" loading="lazy"></div>' : "") + '<div><b>' + esc(w.title) + '</b><span class="s">' + esc(w.sub) + "</span></div><p>" + esc(w.text) + '</p><span class="go">Abrir ↗</span></a>';
     };
     app.innerHTML =
       '<section class="page"><div><h1>BIM + IA</h1><p class="lead">' + esc(B.intro) + "</p></div><div>" +
