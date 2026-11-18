@@ -4,6 +4,7 @@
   var pad = function (n) { return String(n).padStart(2, "0"); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
   var src = function (p, i) { return "img/" + p.slug + "/" + pad(i) + ".jpg"; };
+  var full = function (p, i) { return "img/" + p.slug + "/full/" + pad(i) + ".jpg"; };
 
   var soc = document.getElementById("social");
   soc.innerHTML = [["LinkedIn", C.linkedin], ["Instagram", C.instagram], ["WhatsApp", C.whatsapp]].filter(function (x) { return x[1]; })
@@ -101,7 +102,7 @@
 
   /* Lightbox */
   var lb = document.getElementById("lb"), lbImg = lb.querySelector("img"), lbCount = lb.querySelector(".lb-count"), cur = null, idx = 0;
-  function show() { lbImg.src = src(cur, idx + 1); lbCount.textContent = pad(idx + 1) + " / " + pad(cur.n); }
+  function show() { lbImg.src = full(cur, idx + 1); lbCount.textContent = pad(idx + 1) + " / " + pad(cur.n); }
   function openLb(p, i) { cur = p; idx = i; show(); lb.hidden = false; document.body.style.overflow = "hidden"; }
   function closeLb() { lb.hidden = true; document.body.style.overflow = ""; }
   function step(d) { idx = (idx + d + cur.n) % cur.n; show(); }
