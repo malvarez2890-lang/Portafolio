@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "14";
+window.SITE_VERSION = "15";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -75,7 +75,7 @@ window.PROJECTS = [
   {
     slug: "diplomado-bim", group: "planimetria", title: "Vivienda Colectiva — Diplomado BIM", type: "Diplomado · Vivienda colectiva", year: "2025", n: 6,
     rows: [[1], [2], [3], [4], [5], [6]],
-    ar: {1: 1.5, 2: 1.244, 3: 1.244, 4: 1.244, 5: 1.244, 6: 1.244},
+    ar: {1: 1.9, 2: 1.244, 3: 1.244, 4: 1.244, 5: 1.244, 6: 1.244},
     ficha: {"rol": "Modelación y documentación BIM", "contexto": "Entrega final del Diplomado BIM Arquitectura UC"},
     text: ["Entrega final del Diplomado BIM Arquitectura (Pontificia Universidad Católica de Chile), realizada en julio de 2025. El ejercicio es un edificio de vivienda colectiva de cinco niveles, modelado en Revit y documentado como un set de láminas de arquitectura.", "Incluye axonométricas 3D del edificio, seccionada y explotada, y un set de láminas con ubicación y emplazamiento, plantas de arquitectura de los cinco niveles, planta de departamento tipo, plantas de fundaciones y cubierta, elevaciones, cortes, elevaciones interiores de cocina, axonométricas del conjunto, explotada y de escalera, y tablas de cuantificación."]
   },

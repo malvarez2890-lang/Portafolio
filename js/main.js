@@ -89,12 +89,13 @@
     var f = p.ficha || {};
     var rows = [["Tipo", p.type.replace(" · ", " — ")], ["Lugar", p.place], ["Año", p.year], ["Estructura", f.struct], ["Estado", f.estado], ["Con", f.colab], ["Autoría", f.autor], ["Contexto", f.contexto], ["Mi rol", f.rol]]
       .filter(function (r) { return r[1]; });
-    var fig = function (k) {
+    var fig = function (k, big) {
       var ar = p.ar && p.ar[k];
-      return '<figure data-i="' + (k - 1) + '"' + (ar ? ' style="--ar:' + ar + '"' : "") + '><img src="' + src(p, k) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
+      // Las imágenes que ocupan todo el ancho (láminas y planos) cargan la versión grande, para que no se vean pixeladas.
+      return '<figure data-i="' + (k - 1) + '"' + (ar ? ' style="--ar:' + ar + '"' : "") + '><img src="' + (big ? full(p, k) : src(p, k)) + '" alt="' + esc(p.title) + " — imagen " + k + '" loading="' + (k < 3 ? "eager" : "lazy") + '"></figure>';
     };
     var figs = "", k;
-    if (p.rows) p.rows.forEach(function (r) { figs += '<div class="jrow' + (r.length === 1 ? " one" : "") + '">' + r.map(fig).join("") + "</div>"; });
+    if (p.rows) p.rows.forEach(function (r) { figs += '<div class="jrow' + (r.length === 1 ? " one" : "") + '">' + r.map(function (k) { return fig(k, r.length === 1); }).join("") + "</div>"; });
     else for (k = 1; k <= p.n; k++) figs += fig(k);
     app.innerHTML =
       '<section class="pj"><div><a class="back" href="#/' + (isSvc(p) ? "planimetria" : "") + '">← ' + (isSvc(p) ? esc(S.title) : "Proyectos") + '</a><h1>' + esc(p.title) + "</h1>" +
