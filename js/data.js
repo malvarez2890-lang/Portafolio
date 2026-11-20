@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "12";
+window.SITE_VERSION = "13";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -71,6 +71,13 @@ window.PROJECTS = [
     ar: {1: 1.631, 2: 0.777, 3: 0.819, 4: 1.447, 5: 0.413, 6: 1.413, 7: 1.413, 8: 1.413, 9: 1.413, 10: 1.413, 11: 1.413},
     ficha: {"autor": "Spreaad Arquitectos, arq. Blanca Zúñiga", "rol": "Modelación BIM"},
     text: ["Centro comercial de un nivel organizado en torno a un patio interior de mesas, con ocho locales distribuidos en tres de sus lados, baños y estacionamientos, además de accesos peatonal y vehicular. Una cubierta continua de líneas quebradas envuelve el conjunto, y celosías verticales marcan los accesos. Suma 395 m² útiles en 1.142 m² brutos.", "Proyecto de arquitectura de Spreaad Arquitectos, a cargo de la arquitecta Blanca Zúñiga. Modelación BIM: Matías Álvarez Cifuentes. Se presentan axonométricas, plantas, cubierta, elevaciones, cortes, vistas 3D, detalle de ventanas y puertas, planta de cielo reflejado y plantas eléctricas."]
+  },
+  {
+    slug: "diplomado-bim", group: "planimetria", title: "Vivienda Colectiva — Diplomado BIM", type: "Diplomado · Vivienda colectiva", year: "2025", n: 5,
+    rows: [[1], [2], [3], [4], [5]],
+    ar: {1: 1.244, 2: 1.244, 3: 1.244, 4: 1.244, 5: 1.244},
+    ficha: {"rol": "Modelación y documentación BIM", "contexto": "Entrega final del Diplomado BIM Arquitectura UC"},
+    text: ["Entrega final del Diplomado BIM Arquitectura (Pontificia Universidad Católica de Chile), realizada en julio de 2025. El ejercicio es un edificio de vivienda colectiva de cinco niveles, modelado en Revit y documentado como un set de láminas de arquitectura.", "El set incluye ubicación y emplazamiento, plantas de arquitectura de los cinco niveles, planta de departamento tipo, plantas de fundaciones y cubierta, elevaciones, cortes, elevaciones interiores de cocina, axonométricas del conjunto, explotada y de escalera, y tablas de cuantificación."]
   },
   {
     slug: "confluencia",

@@ -87,7 +87,7 @@
     var p = all, prev = G[(i - 1 + G.length) % G.length], next = G[(i + 1) % G.length];
     document.title = p.title + " — Matías Álvarez Cifuentes";
     var f = p.ficha || {};
-    var rows = [["Tipo", p.type.replace(" · ", " — ")], ["Lugar", p.place], ["Año", p.year], ["Estructura", f.struct], ["Estado", f.estado], ["Con", f.colab], ["Autoría", f.autor], ["Mi rol", f.rol]]
+    var rows = [["Tipo", p.type.replace(" · ", " — ")], ["Lugar", p.place], ["Año", p.year], ["Estructura", f.struct], ["Estado", f.estado], ["Con", f.colab], ["Autoría", f.autor], ["Contexto", f.contexto], ["Mi rol", f.rol]]
       .filter(function (r) { return r[1]; });
     var fig = function (k) {
       var ar = p.ar && p.ar[k];
