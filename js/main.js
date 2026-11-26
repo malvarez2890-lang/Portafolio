@@ -48,7 +48,7 @@
       '<section class="intro"><p class="big">Arquitectura de vivienda y modelación BIM.</p><p class="small">Matías Álvarez Cifuentes · Arquitecto BIM · Talca, Chile</p></section>' +
       '<section><div class="bar"><h2>Proyectos (' + OWN.length + ')</h2><div class="views"><button data-v="img">Imágenes</button><button data-v="list">Índice</button></div></div><div id="plist"></div></section>' +
       '<section class="sec"><div class="bar"><h2>' + esc(S.title) + '</h2><a href="#/planimetria">Ver todo →</a></div><p class="sl">' + esc(S.lead) + "</p>" + projectList(SVC, "img", false) + "</section>" +
-      '<section class="sec"><div class="bar"><h2>BIM + IA</h2><a href="#/bim">Ver todo →</a></div><div class="jgrid">' + [B.course.works[0], B.personal[0]].map(extCard).join("") + "</div></section>";
+      '<section class="sec"><div class="bar"><h2>BIM + IA</h2><a href="#/bim">Ver todo →</a></div><div class="jgrid">' + [B.course.works[0]].concat(B.personal).map(extCard).join("") + "</div></section>";
     var pl = document.getElementById("plist");
     var draw = function () {
       pl.innerHTML = projectList(OWN, view, true);
@@ -118,7 +118,7 @@
       }).join("") + "</div>" +
       '<div class="block"><h2 class="hd">Herramientas</h2><dl class="kv">' + PR.skills.map(function (s) {
         return "<dt>" + esc(s[0]) + "</dt><dd>" + esc(s[1]) + "</dd>";
-      }).join("") + "<dt>Idiomas</dt><dd>" + esc(PR.languages) + '</dd></dl></div><div class="block"><h2 class="hd">BIM + IA</h2>' + extLink(B.course.works[0]) + extLink(B.personal[0]) + "</div></div></section>";
+      }).join("") + "<dt>Idiomas</dt><dd>" + esc(PR.languages) + '</dd></dl></div><div class="block"><h2 class="hd">BIM + IA</h2>' + extLink(B.course.works[0]) + B.personal.map(extLink).join("") + "</div></div></section>";
   }
 
   function contacto() {

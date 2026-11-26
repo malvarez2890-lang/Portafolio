@@ -1,5 +1,5 @@
 // Versión del contenido: súbela (ej. "2") cada vez que reemplaces imágenes con el mismo nombre, para que los navegadores no muestren copias antiguas.
-window.SITE_VERSION = "16";
+window.SITE_VERSION = "17";
 // Contenido del portafolio. Para agregar un proyecto, copia un bloque y sube sus imágenes a /img/<slug>/.
 // "wide": imágenes (1, 2, ...) que ocupan todo el ancho en la galería. "n" es la cantidad de imágenes (01.jpg, 02.jpg, ...). Las descripciones son opcionales.
 window.PROJECTS = [
@@ -127,7 +127,7 @@ window.CONTACT = {
 
 // Sección "BIM + IA": trabajos del curso y trabajos personales (enlaces externos).
 window.BIM = {
-  intro: "Mi trabajo con metodología BIM e inteligencia artificial: la entrega final del workshop BIM + Claude IA y herramientas propias para trabajar con modelos IFC.",
+  intro: "Mi trabajo con metodología BIM e inteligencia artificial: la entrega final del workshop BIM + Claude IA y dos herramientas propias: un visor de modelos IFC y un diseñador de muebles a medida.",
   course: {
     name: "Workshop BIM + Claude IA",
     org: "The BIM Co-Work",
@@ -145,11 +145,18 @@ window.BIM = {
   },
   personal: [
     {
-      title: "Visor IFC en línea",
+      title: "Visor IFC",
       sub: "Herramienta gratuita",
-      text: "Abre un archivo IFC y lo explora en 3D: giros, zoom, cortes y medición de distancias; activa o desactiva capas y consulta las propiedades de cada pieza. Todo se procesa en tu equipo, el archivo no sale del navegador.",
+      text: "Abre modelos IFC en el navegador, en computador, tablet o celular, sin subir el archivo a ningún servidor. Permite cortes, mediciones, vista explosionada, vistas guardadas, capas y propiedades de cada pieza.",
       img: "img/bim/visor-ifc.jpg",
-      url: "https://malvarez2890-lang.github.io/visor-ifc/"
+      url: "https://ifc.elbunkerservers.com/"
+    },
+    {
+      title: "MOBILABs",
+      sub: "Herramienta gratuita",
+      text: "Diseñador de muebles a medida: eliges el tipo de mueble, ajustas las medidas y lo ves en 3D. Calcula el despiece, el plan de corte sobre planchas estándar y la lista de materiales y herrajes para comprar.",
+      img: "img/bim/mobilabs.jpg",
+      url: "https://mobilabs.elbunkerservers.com/"
     }
   ]
 };
