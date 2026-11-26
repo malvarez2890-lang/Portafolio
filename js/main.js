@@ -35,7 +35,7 @@
   }
 
   function extCard(w) {
-    return '<a class="jc" href="' + w.url + '" target="_blank" rel="noopener" style="--lar:1.6"><div class="ph"><img src="' + w.img + V + '" alt="' + esc(w.title) + '" loading="lazy"></div>' +
+    return '<a class="jc" href="' + w.url + '" target="_blank" rel="noopener" style="--lar:1.778"><div class="ph"><img src="' + w.img + V + '" alt="' + esc(w.title) + '" loading="lazy"></div>' +
       '<div class="cap"><span class="t">' + esc(w.title) + '</span><span class="s">' + esc(w.sub) + " ↗</span></div></a>";
   }
   function extLink(w) {
